@@ -1,104 +1,95 @@
+📁 Project Overview
 
-## 📁 Project Overview
+This mini-application fetches data from public APIs, processes it, stores it locally, and displays structured, filterable results through a CLI.
 
-The goal of this project is to integrate with the provided API(s), process the returned data, and generate meaningful output as required in the assignment PDF.
+The assignment includes:
 
-The assignment involves:
+Fetching data from two different API endpoints
 
-* Fetching data from the given API
-* Handling responses, errors, and edge cases
-* Storing the retrieved data locally
-* Structuring code cleanly using modern JavaScript
-* Displaying/outputting the final processed result
+Caching the results locally
 
----
+Clean and modular code structure
 
-## 🏗️ Project Structure
+Error handling for network issues, invalid responses, and timeouts
 
-```
+Filterable list output
+
+Viewing a single item by ID
+
+🏗️ Project Structure
 project/
 ├── src/
-│   ├── app.js          # Main script
-│   └── api.js          # api used for calls
-│   └── cache.js        # does the caching parts 
+│   ├── app.js          # Main CLI application
+│   ├── api.js          # Handles API calls (GET endpoints, error handling)
+│   └── cache.js        # Local caching and file storage logic
 │
-├── data/                 # auto generated local folder for storing files (ignored by Git)
-│   └── (auto-generated files)
+├── data/               # Auto-generated folder for cached data
+│   └── cache.json      # Created automatically on first run
 │
 ├── .gitignore
 ├── package.json
 └── README.md
-```
 
----
+🧰 Tech Stack
 
-## 🧰 Tech Stack
+Node.js
 
-* **Node.js**
-* **Axios / Native fetch()**
-* **JavaScript (ES Modules)**
-* **File System (fs module)**
+Axios / Native Fetch
 
----
+JavaScript (CommonJS modules)
 
-## 🚀 Getting Started
+Filesystem (fs module for caching)
 
-### 1️⃣ Clone the repository
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/Mhmd-Ashif/api-integration.git
+cd api-integration
 
-```bash
-git clone https://github.com/Mhmd-Ashif/api_integration.git
-cd api_integration
-```
-
-### 2️⃣ Install dependencies
-
-```bash
+2️⃣ Install Dependencies
 npm install
-```
 
----
 
-## ▶️ Running the Project
+That's it — no additional configuration is required.
 
-### Run the main script:
-
-```bash
+▶️ Running the Project
+Run the main application:
 node src/app.js
-```
 
-### Or using package scripts:
-
-```bash
+Or via npm:
 npm start
-```
 
----
+📂 Output & Data Storage
 
-## 📂 Output Files
+All fetched or processed data is stored inside:
 
-All generated or downloaded data from the API will be stored inside:
+/data/cache.json
 
-```
-/data/
 
-```
+This file is created automatically if it does not exist.
 
-This includes:
+Stored content includes:
 
-* API responses
-* Processed results
-* Any additional files created during execution
+API responses
 
----
+Parsed and cleaned data
 
-## 📌 Notes for the Review Team
+Cached results to avoid repeated API calls
 
-* The project has been kept **clean, documented, and modular**.
-* API logic is inside `src/`.
-* Output files are stored in `/data/`.
-* No sensitive keys or credentials were used.
-* The repository is set to **public** so it is accessible without permission issues.
+The data/ folder is ignored by Git.
 
-If anything needs clarification, please feel free to reach out.
+🔍 Features Implemented
 
----
+✔ Fetch data from two different API endpoints
+✔ Local caching using filesystem
+✔ List items with filter options
+✔ View details of a single item by ID
+✔ Fully modular code structure
+✔ Error handling for:
+
+Network failure
+
+Invalid response structure
+
+Timeout handling
+
+Missing/malformed fields
