@@ -1,22 +1,22 @@
-📁 Project Overview
+
+## 📁 Project Overview
 
 This mini-application fetches data from public APIs, processes it, stores it locally, and displays structured, filterable results through a CLI.
 
 The assignment includes:
 
-Fetching data from two different API endpoints
+* Fetching data from two different API endpoints
+* Caching the results locally
+* Clean and modular code structure
+* Error handling for network issues, invalid responses, and timeouts
+* Filterable list output
+* Viewing a single item by ID
 
-Caching the results locally
+---
 
-Clean and modular code structure
+## 🏗️ Project Structure
 
-Error handling for network issues, invalid responses, and timeouts
-
-Filterable list output
-
-Viewing a single item by ID
-
-🏗️ Project Structure
+```
 project/
 ├── src/
 │   ├── app.js          # Main CLI application
@@ -29,67 +29,86 @@ project/
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
-🧰 Tech Stack
+---
 
-Node.js
+## 🧰 Tech Stack
 
-Axios / Native Fetch
+* **Node.js**
+* **Axios / Native Fetch**
+* **JavaScript (CommonJS modules)**
+* **Filesystem (fs module for caching)**
 
-JavaScript (CommonJS modules)
+---
 
-Filesystem (fs module for caching)
+## 🚀 Getting Started
 
-🚀 Getting Started
-1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/Mhmd-Ashif/api-integration.git
 cd api-integration
+```
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
+
+```bash
 npm install
-
+```
 
 That's it — no additional configuration is required.
 
-▶️ Running the Project
-Run the main application:
+---
+
+## ▶️ Running the Project
+
+### Run the main application:
+
+```bash
 node src/app.js
+```
 
-Or via npm:
+### Or via npm:
+
+```bash
 npm start
+```
 
-📂 Output & Data Storage
+---
+
+## 📂 Output & Data Storage
 
 All fetched or processed data is stored inside:
 
+```
 /data/cache.json
+```
 
-
-This file is created automatically if it does not exist.
+This file is created **automatically** if it does not exist.
 
 Stored content includes:
 
-API responses
+* API responses
+* Parsed and cleaned data
+* Cached results to avoid repeated API calls
 
-Parsed and cleaned data
+The `data/` folder is **ignored by Git**.
 
-Cached results to avoid repeated API calls
+---
 
-The data/ folder is ignored by Git.
+## 🔍 Features Implemented
 
-🔍 Features Implemented
-
-✔ Fetch data from two different API endpoints
+✔ Fetch data from **two different API endpoints**
 ✔ Local caching using filesystem
-✔ List items with filter options
-✔ View details of a single item by ID
+✔ List items with **filter options**
+✔ View details of a **single item by ID**
 ✔ Fully modular code structure
 ✔ Error handling for:
 
-Network failure
+* Network failure
+* Invalid response structure
+* Timeout handling
+* Missing/malformed fields
 
-Invalid response structure
-
-Timeout handling
-
-Missing/malformed fields
+---
